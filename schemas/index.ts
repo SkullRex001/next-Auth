@@ -6,7 +6,9 @@ export const LoginSchema = z.object({
     }),
     password : z.string().min(1 , {
         message : "Password in required"
-    })
+    }),
+    code : z.optional(z.string())
+    //6 digit?
 }) 
 
 export const RegisterSchema = z.object({
@@ -21,3 +23,15 @@ export const RegisterSchema = z.object({
         message : "Name is required"
     })
 }) 
+
+export const ResetPasswordSchema = z.object({
+    email : z.string().email({
+        message : "Email is required"
+    })
+})
+
+export const NewPasswordSchema = z.object({
+    password : z.string().min(6 , {
+        message : "Minimum of 6 characters required"
+    })
+})

@@ -13,6 +13,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum UserRole {
+  ADMIN
+  USER
+}
+
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -20,7 +25,10 @@ model User {
   emailVerified DateTime? @map("email_verified")
   image         String?
   password      String?
+  role          UserRole  @default(USER)
   accounts      Account[]
+  isTwoFactorEnabled Boolean @default(false)
+  twoFactorConfirmation TwoFactorConfirmation?
 
  
   @@map("users")
@@ -44,4 +52,44 @@ model Account {
  
   @@unique([provider, providerAccountId])
   @@map("accounts")
+}
+
+
+model VerificationToken {
+  id                  String @id @default(cuid())
+  email               String
+  token               String @unique
+  expires             DateTime
+
+  @@unique([email , token])
+  @@map("verificationToken")
+}
+
+model ResetPasswordToken {
+  id                  String @id @default(cuid())
+  email               String
+  token               String @unique
+  expires             DateTime
+
+  @@unique([email , token])
+  @@map("resetPasswordToken")
+}
+
+model TwoFactorToken {
+  id                  String @id @default(cuid())
+  email               String
+  token               String @unique
+  expires             DateTime
+
+  @@unique([email , token])
+  @@map("twoFactorToken")
+}
+
+
+model TwoFactorConfirmation {
+  id String @id @default(cuid()) 
+  userId String @unique
+  user User @relation(fields: [userId] , references: [id] , onDelete: Cascade)
+
+  @@map("twoFactorConfirmation")
 }

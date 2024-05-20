@@ -3,9 +3,9 @@
 import * as z from "zod"
 import { RegisterSchema } from "@/schemas"
 import bcrypt from "bcryptjs"
-
+import { generateVerificationToken } from "@/lib/tokens"
 import prisma from "@/lib/db"
-
+import { sendVerificationEmail } from "@/lib/mail"
 import { getUserByEmail } from "@/data/user"
 
 
@@ -37,11 +37,17 @@ export const register = async (values : z.infer<typeof RegisterSchema> )=>{
         }
     })
 
+    const verificationToken = await generateVerificationToken(email)
+
+
 
    // TO Send Varifiaction email
+   await sendVerificationEmail(verificationToken.email , verificationToken.token)
+   //error haddling of mail left
+   //dont create user until mail is sent successfully
 
     // return {success : 'Email sent😊'}
 
-    return {success : 'User Created'}
+    return {success : 'Confirmation email sent'}
 
 }

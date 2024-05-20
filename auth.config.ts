@@ -1,4 +1,6 @@
 import Credentials from "next-auth/providers/credentials"
+import GitHubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
 
 import { LoginSchema } from "@/schemas"
 
@@ -9,8 +11,18 @@ import bcrypt from 'bcryptjs'
 import { getUserByEmail } from "./data/user"
  
 export default { providers: [
+    GoogleProvider({
+        clientId : process.env.AUTH_GOOGLE_ID,
+        clientSecret : process.env.AUTH_GOOGLE_SECRET
+
+    }),
+    GitHubProvider({
+        clientId : process.env.AUTH_GITHUB_ID,
+        clientSecret : process.env.AUTH_GITHUB_SECRET
+    }),
     Credentials({
          authorize : async (credentials)=>{
+
             const validatedFields = LoginSchema.safeParse(credentials)
 
             if(validatedFields.success){
@@ -25,7 +37,6 @@ export default { providers: [
                 )
 
                 if(passwordsMatch) {
-                    console.log(" user is successfully retuned")
                     return user}
             }
 
