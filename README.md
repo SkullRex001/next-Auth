@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### **AUTH JS PROJECT**
 
-## Getting Started
+### **WRITTEN IS TYPESCRIPT**
 
-First, run the development server:
+### **README WORK IN PROGRESS........**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Screenshot (4533)](https://github.com/SkullRex001/next-Auth/assets/122201082/c3af3937-c430-4ca7-ba15-852bb3cdd44c)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+**LOGIN USING :-**  Password , Google , Github
 
-To learn more about Next.js, take a look at the following resources:
+![Screenshot (4534)](https://github.com/SkullRex001/next-Auth/assets/122201082/2c361071-dab0-4492-a7e2-683ebddb2763)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**EMAIL VERIFICACTION**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Screenshot (4539)](https://github.com/SkullRex001/next-Auth/assets/122201082/a5b79cb8-b1d6-4e30-a87d-0b5713196b69)
 
-## Deploy on Vercel
+![Screenshot (4540)](https://github.com/SkullRex001/next-Auth/assets/122201082/d90312e8-3444-4230-bc49-bbadfae79f2a)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Screenshot (4541)](https://github.com/SkullRex001/next-Auth/assets/122201082/ab02c574-f9cb-4059-8266-83fe5b626e6f)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**MINIMAL UI**
+
+![Screenshot (4543)](https://github.com/SkullRex001/next-Auth/assets/122201082/5ec1bf3b-c732-46b2-b5cd-8ee9e1be6403)
+
+
+**ADMIN ONLY ROUTES AND API's**
+
+![Screenshot (4544)](https://github.com/SkullRex001/next-Auth/assets/122201082/a9363888-4f02-4de4-865f-5db9cdc53df2)
+
+**TWO FACTOR AUTHENTICATION** (OPTIONAL)
+
+![Screenshot (4546)](https://github.com/SkullRex001/next-Auth/assets/122201082/b9e4b4c3-e0cd-441f-8bf6-fb4c8729ddef)
+
+
+
+![Screenshot (4547)](https://github.com/SkullRex001/next-Auth/assets/122201082/c32f3179-cd35-4429-a1a7-53bc8eb58b0e)
+
+![Screenshot (4548)](https://github.com/SkullRex001/next-Auth/assets/122201082/92124054-7101-4098-8f9f-f313953f83e2)
+![Screenshot (4549)](https://github.com/SkullRex001/next-Auth/assets/122201082/7beb10fa-8a49-4c70-aae1-cbd6598a36ec)
+![Screenshot (4550)](https://github.com/SkullRex001/next-Auth/assets/122201082/2af82257-73c8-43b2-9470-e151d9fa2338)
