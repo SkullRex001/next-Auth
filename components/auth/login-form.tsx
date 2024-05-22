@@ -60,7 +60,7 @@ export const LoginForm = () => {
                 if (data?.twoFactor) {
                     setShowTwoFactor(true)
                 }
-          
+
                 setSuccess(data?.success)
                 console.log(data)
                 router.push('/settings')
@@ -68,7 +68,7 @@ export const LoginForm = () => {
             }).catch((err) => {
 
                 setError(err.message)
-                
+
 
 
             })
@@ -82,28 +82,28 @@ export const LoginForm = () => {
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-6">
                     <div className=" space-y-4">
-                        {showTwoFactor &&  <FormField
-                                control={form.control}
-                                name="code"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>Two Factor Code</FormLabel>
-                                        <FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    {...field}
-                                                    placeholder="123456"
-                                                    disabled={isPending}
-                                                   
-                                                />
-                                            </FormControl>
-                                        </FormLabel>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-}
-                       { !showTwoFactor &&( <>
+                        {showTwoFactor && <FormField
+                            control={form.control}
+                            name="code"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Two Factor Code</FormLabel>
+                                    <FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                {...field}
+                                                placeholder="123456"
+                                                disabled={isPending}
+
+                                            />
+                                        </FormControl>
+                                    </FormLabel>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        }
+                        {!showTwoFactor && (<>
                             <FormField
                                 control={form.control}
                                 name="email"
@@ -155,7 +155,7 @@ export const LoginForm = () => {
                     <FormError message={error || urlError} />
                     <FormSuccess message={success} />
                     <Button type="submit" className="w-full" disabled={isPending}>
-                        { !showTwoFactor? "Login" : "Confirm"}
+                        {!showTwoFactor ? "Login" : "Confirm"}
                     </Button>
                 </form>
             </Form>

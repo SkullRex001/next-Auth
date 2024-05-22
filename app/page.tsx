@@ -1,6 +1,6 @@
 import {Button} from '@/components/ui/button'
 
-import { poppins } from './font';
+import { poppins } from "@/app/font";
 
 import { cn } from '@/lib/utils';
 

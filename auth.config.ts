@@ -21,7 +21,8 @@ export default { providers: [
         clientSecret : process.env.AUTH_GITHUB_SECRET
     }),
     Credentials({
-         authorize : async (credentials)=>{
+         authorize : async (credentials): Promise<any> =>{
+            //fix this type error properly
 
             const validatedFields = LoginSchema.safeParse(credentials)
 
